@@ -65,22 +65,38 @@ export default function Page() {
           animate={fadeUp.animate}
           transition={{ ...fadeUp.transition, delay: 0.1 }}
         >
-          <Badge variant="secondary" className="w-fit">
-            Web Developer
-          </Badge>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
-            I design and build websites and web interfaces.
-            <br />
-            Clean structure, clear logic, no unnecessary noise.
-          </h1>
-          <p className="text-lg text-muted-foreground md:text-xl">
-            I work with projects where clarity matters more than hype.
-          </p>
-          <div>
+          <div className="flex flex-wrap items-center gap-3">
+            <Badge variant="secondary">Web Developer</Badge>
+            <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+              Available for select projects
+            </span>
+          </div>
+          <div className="grid gap-4">
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
+              I design and build web products that are calm, clear, and easy to
+              maintain.
+            </h1>
+            <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
+              Thoughtful structure, sharp UX, and steady delivery. No noise, no
+              trend chasing.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
             <Button asChild size="lg" className="h-12 px-6 text-base">
               <a href="mailto:your@email.com">Get in touch</a>
             </Button>
+            <Button
+              variant="secondary"
+              asChild
+              size="lg"
+              className="h-12 px-6 text-base"
+            >
+              <a href="#selected-work">View selected work</a>
+            </Button>
           </div>
+          <p className="text-sm text-muted-foreground">
+            I work with teams who value clarity over hype.
+          </p>
         </motion.section>
 
         <Separator />
@@ -260,6 +276,7 @@ export default function Page() {
         </motion.section>
 
         <motion.section
+          id="selected-work"
           className="grid gap-6"
           initial={fadeUp.initial}
           whileInView={fadeUp.animate}
