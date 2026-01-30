@@ -1,13 +1,31 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { motion } from "motion/react";
+
+const easeInOut = [0.21, 0.61, 0.35, 1] as const;
+
+const fadeUp = {
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: easeInOut },
+};
+
+const viewport = { once: true, amount: 0.3 };
 
 export default function Page() {
   return (
     <main className="min-h-screen">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 px-6 py-16 md:px-10 md:py-24">
-        <header className="flex flex-wrap items-center justify-between gap-6">
+        <motion.header
+          className="flex flex-wrap items-center justify-between gap-6"
+          initial={fadeUp.initial}
+          animate={fadeUp.animate}
+          transition={fadeUp.transition}
+        >
           <div className="space-y-1">
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               Pavel B.
@@ -39,9 +57,14 @@ export default function Page() {
               </a>
             </Button>
           </div>
-        </header>
+        </motion.header>
 
-        <section className="flex flex-col gap-8 rounded-3xl p-8 md:p-12">
+        <motion.section
+          className="flex flex-col gap-8 rounded-3xl p-8 md:p-12"
+          initial={fadeUp.initial}
+          animate={fadeUp.animate}
+          transition={{ ...fadeUp.transition, delay: 0.1 }}
+        >
           <Badge variant="secondary" className="w-fit">
             Web Developer
           </Badge>
@@ -58,11 +81,17 @@ export default function Page() {
               <a href="mailto:your@email.com">Get in touch</a>
             </Button>
           </div>
-        </section>
+        </motion.section>
 
         <Separator />
 
-        <section className="grid gap-8">
+        <motion.section
+          className="grid gap-8"
+          initial={fadeUp.initial}
+          whileInView={fadeUp.animate}
+          transition={fadeUp.transition}
+          viewport={viewport}
+        >
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div className="grid gap-2">
               <h2 className="text-3xl font-semibold md:text-4xl">About</h2>
@@ -104,9 +133,15 @@ export default function Page() {
               </div>
             </Card>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="grid gap-8">
+        <motion.section
+          className="grid gap-8"
+          initial={fadeUp.initial}
+          whileInView={fadeUp.animate}
+          transition={fadeUp.transition}
+          viewport={viewport}
+        >
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div className="grid gap-2">
               <h2 className="text-3xl font-semibold md:text-4xl">What I do</h2>
@@ -145,9 +180,7 @@ export default function Page() {
                 <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
                   03
                 </div>
-                <p className="text-lg font-semibold">
-                  Frontend implementation
-                </p>
+                <p className="text-lg font-semibold">Frontend implementation</p>
               </div>
             </Card>
             <Card className="border-border bg-card p-6">
@@ -161,9 +194,15 @@ export default function Page() {
               </div>
             </Card>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="grid gap-8">
+        <motion.section
+          className="grid gap-8"
+          initial={fadeUp.initial}
+          whileInView={fadeUp.animate}
+          transition={fadeUp.transition}
+          viewport={viewport}
+        >
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div className="grid gap-2">
               <h2 className="text-3xl font-semibold md:text-4xl">How I work</h2>
@@ -218,9 +257,15 @@ export default function Page() {
               </div>
             </Card>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="grid gap-6">
+        <motion.section
+          className="grid gap-6"
+          initial={fadeUp.initial}
+          whileInView={fadeUp.animate}
+          transition={fadeUp.transition}
+          viewport={viewport}
+        >
           <div className="flex items-center gap-3">
             <h2 className="text-3xl font-semibold md:text-4xl">
               Selected work
@@ -259,8 +304,8 @@ export default function Page() {
               <div className="grid gap-2">
                 <h3 className="text-xl font-semibold">Product Docs</h3>
                 <p className="text-sm text-muted-foreground">
-                  Documentation hub that makes complex features easy to find
-                  and easy to understand.
+                  Documentation hub that makes complex features easy to find and
+                  easy to understand.
                 </p>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
@@ -291,11 +336,17 @@ export default function Page() {
               </div>
             </Card>
           </div>
-        </section>
+        </motion.section>
 
         <Separator />
 
-        <section className="grid gap-6">
+        <motion.section
+          className="grid gap-6"
+          initial={fadeUp.initial}
+          whileInView={fadeUp.animate}
+          transition={fadeUp.transition}
+          viewport={viewport}
+        >
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div className="grid gap-2">
               <h2 className="text-3xl font-semibold md:text-4xl">Contact</h2>
@@ -341,7 +392,7 @@ export default function Page() {
               </Button>
             </div>
           </Card>
-        </section>
+        </motion.section>
       </div>
     </main>
   );
