@@ -62,69 +62,160 @@ export default function Page() {
 
         <Separator />
 
-        <section className="grid gap-6">
-          <div className="flex items-center gap-3">
-            <h2 className="text-3xl font-semibold md:text-4xl">
-              Focused on clarity and durability
-            </h2>
+        <section className="grid gap-8">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="grid gap-2">
+              <h2 className="text-3xl font-semibold md:text-4xl">About</h2>
+              <p className="max-w-2xl text-muted-foreground">
+                Calm, structured work that stays understandable as products
+                grow.
+              </p>
+            </div>
+            <Badge variant="secondary" className="w-fit">
+              Approach
+            </Badge>
           </div>
-          <div className="grid gap-4 text-muted-foreground md:text-lg">
-            <p>
-              I’m a web developer focused on structure, usability and
-              maintainability. I build things that are easy to understand, easy
-              to use and easy to evolve.
-            </p>
-            <p>
-              I don’t chase trends for the sake of trends. I care about clarity,
-              intent and long-term usefulness.
-            </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Card className="border-border bg-card p-6">
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  Focus
+                </div>
+                <p className="text-lg font-semibold">
+                  Structure, usability, and maintainability come first.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  I build things that are easy to understand, easy to use, and
+                  easy to evolve.
+                </p>
+              </div>
+            </Card>
+            <Card className="border-border bg-card p-6">
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  Intent
+                </div>
+                <p className="text-lg font-semibold">
+                  I don’t chase trends for the sake of trends.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  I care about clarity, intent, and long-term usefulness.
+                </p>
+              </div>
+            </Card>
           </div>
         </section>
 
-        <section className="grid gap-6">
-          <h2 className="text-3xl font-semibold md:text-4xl">What I do</h2>
+        <section className="grid gap-8">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="grid gap-2">
+              <h2 className="text-3xl font-semibold md:text-4xl">What I do</h2>
+              <p className="max-w-2xl text-muted-foreground">
+                A small, focused set of services designed to keep products
+                clear, fast, and maintainable.
+              </p>
+            </div>
+            <Badge variant="secondary" className="w-fit">
+              Services
+            </Badge>
+          </div>
           <div className="grid gap-4 md:grid-cols-2">
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">
-                Website and landing page development
-              </p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  01
+                </div>
+                <p className="text-lg font-semibold">
+                  Website and landing page development
+                </p>
+              </div>
             </Card>
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">UI and interaction design</p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  02
+                </div>
+                <p className="text-lg font-semibold">
+                  UI and interaction design
+                </p>
+              </div>
             </Card>
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">Frontend implementation</p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  03
+                </div>
+                <p className="text-lg font-semibold">
+                  Frontend implementation
+                </p>
+              </div>
             </Card>
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">
-                Improving existing products and interfaces
-              </p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  04
+                </div>
+                <p className="text-lg font-semibold">
+                  Improving existing products and interfaces
+                </p>
+              </div>
             </Card>
           </div>
         </section>
 
-        <section className="grid gap-6">
-          <h2 className="text-3xl font-semibold md:text-4xl">How I work</h2>
+        <section className="grid gap-8">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="grid gap-2">
+              <h2 className="text-3xl font-semibold md:text-4xl">How I work</h2>
+              <p className="max-w-2xl text-muted-foreground">
+                Clear process, fast feedback loops, and practical decisions that
+                keep projects stable over time.
+              </p>
+            </div>
+            <Badge variant="secondary" className="w-fit">
+              Process
+            </Badge>
+          </div>
           <div className="grid gap-4 md:grid-cols-2">
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">
-                I keep scope clear and reasonable
-              </p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  01
+                </div>
+                <p className="text-lg font-semibold">
+                  I keep scope clear and reasonable
+                </p>
+              </div>
             </Card>
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">
-                I prefer simple solutions over fragile complexity
-              </p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  02
+                </div>
+                <p className="text-lg font-semibold">
+                  I prefer simple solutions over fragile complexity
+                </p>
+              </div>
             </Card>
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">
-                I work in short iterations and ship working results
-              </p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  03
+                </div>
+                <p className="text-lg font-semibold">
+                  I work in short iterations and ship working results
+                </p>
+              </div>
             </Card>
             <Card className="border-border bg-card p-6">
-              <p className="text-lg font-semibold">
-                I don’t take every project — fit matters
-              </p>
+              <div className="grid gap-3">
+                <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  04
+                </div>
+                <p className="text-lg font-semibold">
+                  I don’t take every project — fit matters
+                </p>
+              </div>
             </Card>
           </div>
         </section>
@@ -204,14 +295,52 @@ export default function Page() {
 
         <Separator />
 
-        <section className="grid gap-4">
-          <h2 className="text-3xl font-semibold md:text-4xl">Contact</h2>
-          <p className="text-muted-foreground md:text-lg">
-            If you think we might be a good fit — email me at{" "}
-            <span className="font-semibold text-foreground">
-              your@email.com
-            </span>
-          </p>
+        <section className="grid gap-6">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="grid gap-2">
+              <h2 className="text-3xl font-semibold md:text-4xl">Contact</h2>
+              <p className="max-w-2xl text-muted-foreground">
+                If you think we might be a good fit, send a short note and a
+                link to what you’re building.
+              </p>
+            </div>
+            <Badge variant="secondary" className="w-fit">
+              Availability
+            </Badge>
+          </div>
+          <Card className="border-border bg-card p-6">
+            <div className="grid gap-4 md:grid-cols-[1.2fr_1fr] md:items-center">
+              <div className="grid gap-2">
+                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  Email
+                </p>
+                <p className="text-2xl font-semibold">your@email.com</p>
+                <p className="text-sm text-muted-foreground">
+                  I reply within 2–3 business days.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2 md:justify-end">
+                <Button asChild size="lg">
+                  <a href="mailto:your@email.com">Email me</a>
+                </Button>
+                <Button asChild variant="secondary" size="lg">
+                  <a href="https://cal.com/your-handle">Schedule</a>
+                </Button>
+              </div>
+            </div>
+            <Separator className="my-5" />
+            <div className="flex flex-wrap gap-2">
+              <Button asChild variant="ghost" size="sm">
+                <a href="https://github.com/your-handle">GitHub</a>
+              </Button>
+              <Button asChild variant="ghost" size="sm">
+                <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
+              </Button>
+              <Button asChild variant="ghost" size="sm">
+                <a href="https://x.com/your-handle">X</a>
+              </Button>
+            </div>
+          </Card>
         </section>
       </div>
     </main>
