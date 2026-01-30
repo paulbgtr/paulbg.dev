@@ -45,7 +45,7 @@ export const Contact = () => {
               <Link href="mailto:pbg.work@pm.me">Email me</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="https://cal.com/paulbgtr">Schedule</Link>
+              <Link href="https://cal.eu/pbgtr">Schedule</Link>
             </Button>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Link from "next/link";
 
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -31,7 +32,7 @@ export const Hero = () => {
       </div>
       <div className="flex flex-wrap items-center gap-3">
         <Button asChild size="lg" className="h-12 px-6 text-base">
-          <a href="mailto:your@email.com">Get in touch</a>
+          <Link href="mailto:pbg.work@pm.me">Get in touch</Link>
         </Button>
         <Button
           variant="secondary"
@@ -39,7 +40,7 @@ export const Hero = () => {
           size="lg"
           className="h-12 px-6 text-base"
         >
-          <a href="#selected-work">View selected work</a>
+          <Link href="#selected-work">View selected work</Link>
         </Button>
       </div>
       <p className="text-sm text-muted-foreground">
