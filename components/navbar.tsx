@@ -18,7 +18,12 @@ export const Navbar = () => {
         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
           Pavel B.
         </p>
-        <p className="text-xl font-semibold">Web Developer</p>
+        <div className="flex items-center gap-2 text-xl font-semibold">
+          <span>Web Developer</span>
+          <span className="text-sm font-normal text-muted-foreground">
+            <span aria-hidden="true">📍</span> Tallinn
+          </span>
+        </div>
       </div>
       <div className="flex flex-wrap items-center gap-2">
         <Button asChild variant="ghost" size="sm">
