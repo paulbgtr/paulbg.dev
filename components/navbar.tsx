@@ -25,22 +25,29 @@ export const Navbar = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-wrap items-center gap-2">
-        <Button asChild variant="ghost" size="sm">
-          <Link href="https://github.com/paulbgtr" aria-label="GitHub">
-            GitHub
-          </Link>
-        </Button>
-        <Button asChild variant="ghost" size="sm">
-          <Link href="https://pbgtr.bsky.social/" aria-label="X">
-            Bluesky
-          </Link>
-        </Button>
-        <Button asChild variant="ghost" size="sm">
-          <Link href="mailto:pbg.work@pm.me" aria-label="Email">
-            Email
-          </Link>
-        </Button>
+      <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <Button asChild variant="ghost" size="sm">
+            <Link href="https://github.com/paulbgtr" aria-label="GitHub">
+              GitHub
+            </Link>
+          </Button>
+          <Button asChild variant="ghost" size="sm">
+            <Link href="https://pbgtr.bsky.social/" aria-label="X">
+              Bluesky
+            </Link>
+          </Button>
+          <Button asChild variant="ghost" size="sm">
+            <Link href="mailto:pbg.work@pm.me" aria-label="Email">
+              Email
+            </Link>
+          </Button>
+        </div>
+        <div className="flex items-center">
+          <Button asChild size="sm">
+            <Link href="https://cal.eu/pbgtr">Schedule</Link>
+          </Button>
+        </div>
       </div>
     </motion.header>
   );
