@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 
 import { fadeUp } from "@/lib/utils";
 
+import Link from "next/link";
+
 export const Navbar = () => {
   return (
     <motion.header
@@ -20,27 +22,19 @@ export const Navbar = () => {
       </div>
       <div className="flex flex-wrap items-center gap-2">
         <Button asChild variant="ghost" size="sm">
-          <a href="https://github.com/your-handle" aria-label="GitHub">
+          <Link href="https://github.com/paulbgtr" aria-label="GitHub">
             GitHub
-          </a>
+          </Link>
         </Button>
         <Button asChild variant="ghost" size="sm">
-          <a
-            href="https://www.linkedin.com/in/your-handle"
-            aria-label="LinkedIn"
-          >
-            LinkedIn
-          </a>
+          <Link href="https://pbgtr.bsky.social/" aria-label="X">
+            Bluesky
+          </Link>
         </Button>
         <Button asChild variant="ghost" size="sm">
-          <a href="https://x.com/your-handle" aria-label="X">
-            X
-          </a>
-        </Button>
-        <Button asChild variant="ghost" size="sm">
-          <a href="mailto:your@email.com" aria-label="Email">
+          <Link href="mailto:pbg.work@pm.me" aria-label="Email">
             Email
-          </a>
+          </Link>
         </Button>
       </div>
     </motion.header>

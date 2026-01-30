@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Link from "next/link";
 
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
@@ -34,30 +35,31 @@ export const Contact = () => {
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               Email
             </p>
-            <p className="text-2xl font-semibold">your@email.com</p>
+            <p className="text-2xl font-semibold">pbg.work@pm.me</p>
             <p className="text-sm text-muted-foreground">
               I reply within 2–3 business days.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 md:justify-end">
             <Button asChild size="lg">
-              <a href="mailto:your@email.com">Email me</a>
+              <Link href="mailto:pbg.work@pm.me">Email me</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <a href="https://cal.com/your-handle">Schedule</a>
+              <Link href="https://cal.com/paulbgtr">Schedule</Link>
             </Button>
           </div>
         </div>
         <Separator className="my-5" />
         <div className="flex flex-wrap gap-2">
           <Button asChild variant="ghost" size="sm">
-            <a href="https://github.com/your-handle">GitHub</a>
+            <Link href="https://github.com/paulbgtr" aria-label="GitHub">
+              GitHub
+            </Link>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
-          </Button>
-          <Button asChild variant="ghost" size="sm">
-            <a href="https://x.com/your-handle">X</a>
+            <Link href="https://pbgtr.bsky.social/" aria-label="X">
+              Bluesky
+            </Link>
           </Button>
         </div>
       </Card>
