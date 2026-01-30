@@ -1,9 +1,72 @@
 import { motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
 
 import { Badge } from "./ui/badge";
-import { Card } from "./ui/card";
+import { Button } from "./ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "./ui/card";
 
 import { viewport, fadeUp } from "@/lib/utils";
+
+const projects = [
+  {
+    title: "Talente",
+    description:
+      "Landing page for a hair‑salon booking app, designed to explain the product fast and convert visits into bookings.",
+    href: "https://talente.ee",
+    image: {
+      src: "/talente.png",
+      alt: "Talente booking app landing page preview",
+    },
+    tags: ["Design System", "Web"],
+    role: "Design + Frontend",
+    year: "2025",
+    aspect: "aspect-[16/10]",
+    gradient:
+      "bg-[linear-gradient(120deg,hsl(var(--muted))_0%,hsl(var(--accent))_45%,hsl(var(--muted))_100%)]",
+  },
+  {
+    title: "TalTech Collectibles",
+    description:
+      "Led a team delivering an NFC‑connected collectibles platform with a companion web app.",
+    href: "https://taltech-collectibles.vercel.app/",
+    image: {
+      src: "/taltech-collectibles.png",
+      alt: "TalTech Collectibles web app preview",
+    },
+    tags: ["Hardware", "Product"],
+    role: "UX + Frontend + Product design lead",
+    year: "2025",
+    aspect: "aspect-[16/10]",
+    gradient:
+      "bg-[radial-gradient(circle_at_top,hsl(var(--accent))_0%,hsl(var(--muted))_55%,hsl(var(--background))_100%)]",
+  },
+  {
+    title: "Nebriq",
+    description:
+      "Minimal, AI‑assisted writing workspace built to keep focus high and friction low.",
+    href: "https://nebriq.com",
+    image: {
+      src: "/nebriq.png",
+      alt: "Nebriq writing workspace preview",
+    },
+    tags: ["Product", "Web", "AI"],
+    role: "Product Design, Development, AI Integration",
+    year: "2024",
+    aspect: "aspect-[21/9]",
+    gradient:
+      "bg-[linear-gradient(135deg,hsl(var(--background))_0%,hsl(var(--accent))_45%,hsl(var(--muted))_100%)]",
+    span: "md:col-span-2",
+    maxWidth: "md:max-w-2xl",
+  },
+];
 
 export const SelectedWork = () => {
   return (
@@ -19,69 +82,60 @@ export const SelectedWork = () => {
         <h2 className="text-3xl font-semibold md:text-4xl">Selected work</h2>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
-        <Card className="group flex h-full flex-col gap-5 border-border bg-card p-6">
-          <div className="aspect-[16/10] overflow-hidden rounded-2xl border bg-muted">
-            <div className="h-full w-full bg-[linear-gradient(120deg,hsl(var(--muted))_0%,hsl(var(--accent))_45%,hsl(var(--muted))_100%)]" />
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary">Design System</Badge>
-            <Badge variant="secondary">Web</Badge>
-          </div>
-          <div className="grid gap-2">
-            <h3 className="text-xl font-semibold">Studio Index</h3>
-            <p className="text-sm text-muted-foreground">
-              Portfolio site for a design studio with clear navigation and fast
-              content updates.
-            </p>
-          </div>
-          <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <span>Role: Design + Frontend</span>
-            <span className="text-border">•</span>
-            <span>2024</span>
-          </div>
-        </Card>
-        <Card className="group flex h-full flex-col gap-5 border-border bg-card p-6">
-          <div className="aspect-[16/10] overflow-hidden rounded-2xl border bg-muted">
-            <div className="h-full w-full bg-[radial-gradient(circle_at_top,hsl(var(--accent))_0%,hsl(var(--muted))_55%,hsl(var(--background))_100%)]" />
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary">Docs</Badge>
-            <Badge variant="secondary">Product</Badge>
-          </div>
-          <div className="grid gap-2">
-            <h3 className="text-xl font-semibold">Product Docs</h3>
-            <p className="text-sm text-muted-foreground">
-              Documentation hub that makes complex features easy to find and
-              easy to understand.
-            </p>
-          </div>
-          <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <span>Role: UX + Frontend</span>
-            <span className="text-border">•</span>
-            <span>2023</span>
-          </div>
-        </Card>
-        <Card className="group flex h-full flex-col gap-5 border-border bg-card p-6 md:col-span-2">
-          <div className="aspect-[21/9] overflow-hidden rounded-2xl border bg-muted">
-            <div className="h-full w-full bg-[linear-gradient(135deg,hsl(var(--background))_0%,hsl(var(--accent))_45%,hsl(var(--muted))_100%)]" />
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary">UX Audit</Badge>
-            <Badge variant="secondary">Internal Tool</Badge>
-          </div>
-          <div className="grid gap-2 md:max-w-2xl">
-            <h3 className="text-xl font-semibold">Interface Refresh</h3>
-            <p className="text-sm text-muted-foreground">
-              UI cleanup for an internal tool, reducing friction and boosting
-              daily usage.
-            </p>
-          </div>
-          <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <span>Role: UI Refresh + Delivery</span>
-            <span className="text-border">•</span>
-            <span>2022</span>
-          </div>
-        </Card>
+        {projects.map((project) => (
+          <Card
+            key={project.title}
+            className={`group h-full border-border bg-card ${
+              project.span ?? ""
+            }`}
+          >
+            <CardHeader className="gap-4">
+              <div
+                className={`${project.aspect} overflow-hidden rounded-2xl border bg-muted`}
+              >
+                <Image
+                  src={project.image.src}
+                  alt={project.image.alt}
+                  width={1200}
+                  height={800}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                {project.tags.map((tag) => (
+                  <Badge key={tag} variant="secondary">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+              <div className={`grid gap-2 ${project.maxWidth ?? ""}`}>
+                <CardTitle className="text-xl">{project.title}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div>
+                <div className="flex items-center gap-3">
+                  <span>Role: {project.role}</span>
+                  <span>•</span>
+                  <span>{project.year}</span>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button asChild variant="secondary" size="sm">
+                <Link
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${project.title} website`}
+                >
+                  View project →
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </motion.section>
   );
