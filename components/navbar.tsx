@@ -9,23 +9,23 @@ import Link from "next/link";
 export const Navbar = () => {
   return (
     <motion.header
-      className="flex flex-wrap items-center justify-between gap-6"
+      className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6"
       initial={fadeUp.initial}
       animate={fadeUp.animate}
       transition={fadeUp.transition}
     >
-      <div className="space-y-1">
+      <div className="w-full space-y-1 sm:w-auto">
         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
           Pavel B.
         </p>
-        <div className="flex items-center gap-2 text-xl font-semibold">
+        <div className="flex flex-wrap items-center gap-2 text-xl font-semibold">
           <span>Web Developer</span>
           <span className="text-sm font-normal text-muted-foreground">
             <span aria-hidden="true">📍</span> Tallinn
           </span>
         </div>
       </div>
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
         <div className="flex flex-wrap items-center gap-2">
           <Button asChild variant="ghost" size="sm">
             <Link href="https://github.com/paulbgtr" aria-label="GitHub">
@@ -43,8 +43,8 @@ export const Navbar = () => {
             </Link>
           </Button>
         </div>
-        <div className="flex items-center">
-          <Button asChild size="sm">
+        <div className="flex w-full sm:w-auto">
+          <Button asChild size="sm" className="w-full sm:w-auto">
             <Link href="https://cal.eu/pbgtr">Schedule</Link>
           </Button>
         </div>

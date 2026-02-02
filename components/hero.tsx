@@ -10,12 +10,12 @@ import { fadeUp } from "@/lib/utils";
 export const Hero = () => {
   return (
     <motion.section
-      className="grid gap-10 rounded-3xl p-8 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-12 md:p-12"
+      className="grid gap-8 rounded-3xl p-6 sm:p-8 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-12 md:p-12"
       initial={fadeUp.initial}
       animate={fadeUp.animate}
       transition={{ ...fadeUp.transition, delay: 0.1 }}
     >
-      <div className="grid gap-8">
+      <div className="grid gap-6 sm:gap-8">
         <div className="flex flex-wrap items-center gap-3">
           <Badge variant="secondary">Web Developer</Badge>
           <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
@@ -23,24 +23,24 @@ export const Hero = () => {
           </span>
         </div>
         <div className="grid gap-4">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             I design and build web products that are calm, clear, and easy to
             maintain.
           </h1>
-          <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
+          <p className="max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl">
             Thoughtful structure, sharp UX, and steady delivery. No noise, no
             trend chasing.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <Button asChild size="lg" className="h-12 px-6 text-base">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <Button asChild size="lg" className="h-12 w-full px-6 text-base sm:w-auto">
             <Link href="mailto:pbg.work@pm.me">Get in touch</Link>
           </Button>
           <Button
             variant="secondary"
             asChild
             size="lg"
-            className="h-12 px-6 text-base"
+            className="h-12 w-full px-6 text-base sm:w-auto"
           >
             <Link href="#selected-work">View selected work</Link>
           </Button>
