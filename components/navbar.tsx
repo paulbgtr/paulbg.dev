@@ -33,14 +33,6 @@ export const Navbar = () => {
             </Link>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link
-              href="https://www.instagram.com/pavelbgtr/"
-              aria-label="Instagram"
-            >
-              Instagram
-            </Link>
-          </Button>
-          <Button asChild variant="ghost" size="sm">
             <Link href="https://pbgtr.bsky.social/" aria-label="X">
               Bluesky
             </Link>
