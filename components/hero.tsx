@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "./ui/badge";
@@ -9,43 +10,63 @@ import { fadeUp } from "@/lib/utils";
 export const Hero = () => {
   return (
     <motion.section
-      className="flex flex-col gap-8 rounded-3xl p-8 md:p-12"
+      className="grid gap-10 rounded-3xl p-8 md:grid-cols-[1.15fr_0.85fr] md:items-center md:gap-12 md:p-12"
       initial={fadeUp.initial}
       animate={fadeUp.animate}
       transition={{ ...fadeUp.transition, delay: 0.1 }}
     >
-      <div className="flex flex-wrap items-center gap-3">
-        <Badge variant="secondary">Web Developer</Badge>
-        <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-          Available for select projects
-        </span>
-      </div>
-      <div className="grid gap-4">
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
-          I design and build web products that are calm, clear, and easy to
-          maintain.
-        </h1>
-        <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
-          Thoughtful structure, sharp UX, and steady delivery. No noise, no
-          trend chasing.
+      <div className="grid gap-8">
+        <div className="flex flex-wrap items-center gap-3">
+          <Badge variant="secondary">Web Developer</Badge>
+          <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+            Available for select projects
+          </span>
+        </div>
+        <div className="grid gap-4">
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
+            I design and build web products that are calm, clear, and easy to
+            maintain.
+          </h1>
+          <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
+            Thoughtful structure, sharp UX, and steady delivery. No noise, no
+            trend chasing.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button asChild size="lg" className="h-12 px-6 text-base">
+            <Link href="mailto:pbg.work@pm.me">Get in touch</Link>
+          </Button>
+          <Button
+            variant="secondary"
+            asChild
+            size="lg"
+            className="h-12 px-6 text-base"
+          >
+            <Link href="#selected-work">View selected work</Link>
+          </Button>
+        </div>
+        <p className="text-sm text-muted-foreground">
+          I work with teams who value clarity over hype.
         </p>
       </div>
-      <div className="flex flex-wrap items-center gap-3">
-        <Button asChild size="lg" className="h-12 px-6 text-base">
-          <Link href="mailto:pbg.work@pm.me">Get in touch</Link>
-        </Button>
-        <Button
-          variant="secondary"
-          asChild
-          size="lg"
-          className="h-12 px-6 text-base"
-        >
-          <Link href="#selected-work">View selected work</Link>
-        </Button>
+      <div className="relative mx-auto w-full max-w-sm md:mx-0 md:justify-self-end">
+        <div
+          aria-hidden="true"
+          className="absolute -inset-6 rounded-[32px] bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent))_0%,transparent_60%)] opacity-40 blur-2xl"
+        />
+        <div className="relative overflow-hidden rounded-[28px] border border-border bg-card/70 p-2 shadow-sm">
+          <div className="aspect-[4/5] overflow-hidden rounded-[22px] bg-muted">
+            <Image
+              src="/portrait.png"
+              alt="Portrait of Pavel B."
+              width={720}
+              height={900}
+              priority
+              className="h-full w-full object-cover object-[50%_35%]"
+            />
+          </div>
+        </div>
       </div>
-      <p className="text-sm text-muted-foreground">
-        I work with teams who value clarity over hype.
-      </p>
     </motion.section>
   );
 };
