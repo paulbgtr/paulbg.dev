@@ -14,9 +14,10 @@ export default function Page() {
   return (
     <main className="min-h-screen">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-20 px-6 py-16 md:px-10 md:py-24">
-        <Navbar />
-
-        <Hero />
+        <div className="flex flex-col gap-8 sm:gap-10">
+          <Navbar />
+          <Hero />
+        </div>
 
         <Separator />
 
