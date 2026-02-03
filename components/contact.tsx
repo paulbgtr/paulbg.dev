@@ -35,14 +35,14 @@ export const Contact = () => {
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               Email
             </p>
-            <p className="text-2xl font-semibold">pbg.work@pm.me</p>
+            <p className="text-2xl font-semibold">pavel@paulbg.dev</p>
             <p className="text-sm text-muted-foreground">
               I reply within 2–3 business days.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 md:justify-end">
             <Button asChild size="lg">
-              <Link href="mailto:pbg.work@pm.me">Email me</Link>
+              <Link href="mailto:pavel@paulbg.dev">Email me</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
               <Link href="https://cal.eu/pbgtr">Schedule</Link>

@@ -40,7 +40,7 @@ export const Navbar = () => {
           </Link>
         </Button>
         <Button asChild variant="ghost" size="sm">
-          <Link href="mailto:pbg.work@pm.me" aria-label="Email">
+          <Link href="mailto:pavel@paulbg.dev" aria-label="Email">
             Email
           </Link>
         </Button>

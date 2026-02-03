@@ -33,8 +33,12 @@ export const Hero = () => {
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-          <Button asChild size="lg" className="h-12 w-full px-6 text-base sm:w-auto">
-            <Link href="mailto:pbg.work@pm.me">Get in touch</Link>
+          <Button
+            asChild
+            size="lg"
+            className="h-12 w-full px-6 text-base sm:w-auto"
+          >
+            <Link href="mailto:pavel@paulbg.dev">Get in touch</Link>
           </Button>
           <Button
             variant="secondary"
