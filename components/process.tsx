@@ -18,8 +18,7 @@ export const Process = () => {
         <div className="grid gap-2">
           <h2 className="text-3xl font-semibold md:text-4xl">How I work</h2>
           <p className="max-w-2xl text-muted-foreground">
-            Clear process, fast feedback loops, and practical decisions that
-            keep projects stable over time.
+            Simple, transparent process from first call to launch.
           </p>
         </div>
         <Badge variant="secondary" className="w-fit">
@@ -32,8 +31,10 @@ export const Process = () => {
             <div className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               01
             </div>
-            <p className="text-lg font-semibold">
-              I keep scope clear and reasonable
+            <p className="text-lg font-semibold">Quick kickoff and clear plan</p>
+            <p className="text-sm text-muted-foreground">
+              We align on goals, pages, and priorities so you know exactly what
+              is being built.
             </p>
           </div>
         </Card>
@@ -43,7 +44,11 @@ export const Process = () => {
               02
             </div>
             <p className="text-lg font-semibold">
-              I prefer simple solutions over fragile complexity
+              First working version early
+            </p>
+            <p className="text-sm text-muted-foreground">
+              You get something real to click through quickly, instead of
+              waiting for a big reveal.
             </p>
           </div>
         </Card>
@@ -53,7 +58,11 @@ export const Process = () => {
               03
             </div>
             <p className="text-lg font-semibold">
-              I work in short iterations and ship working results
+              Feedback rounds with clear updates
+            </p>
+            <p className="text-sm text-muted-foreground">
+              We improve the result in short rounds, and I keep communication
+              direct and easy to follow.
             </p>
           </div>
         </Card>
@@ -63,7 +72,11 @@ export const Process = () => {
               04
             </div>
             <p className="text-lg font-semibold">
-              I don’t take every project — fit matters
+              Launch and handoff without confusion
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Final delivery is clean and maintainable, with support if you
+              need ongoing improvements.
             </p>
           </div>
         </Card>
