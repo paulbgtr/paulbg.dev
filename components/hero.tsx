@@ -19,17 +19,16 @@ export const Hero = () => {
         <div className="flex flex-wrap items-center gap-3">
           <Badge variant="secondary">Web Developer</Badge>
           <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-            Available for select projects
+            Small business, early product, redesigns
           </span>
         </div>
         <div className="grid gap-4">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            I design and build web products that are calm, clear, and easy to
-            maintain.
+            I build clear, modern websites and web products.
           </h1>
           <p className="max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl">
-            Thoughtful structure, sharp UX, and steady delivery. No noise, no
-            trend chasing.
+            I help small businesses and early teams launch, improve, or
+            redesign what their customers use.
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -50,7 +49,11 @@ export const Hero = () => {
           </Button>
         </div>
         <p className="text-sm text-muted-foreground">
-          I work with teams who value clarity over hype.
+          Prefer email? Great. Prefer a call?{" "}
+          <Link href="https://cal.eu/pbgtr" className="underline underline-offset-4">
+            Schedule one here
+          </Link>
+          .
         </p>
       </div>
       <div className="relative mx-auto w-full max-w-sm md:mx-0 md:justify-self-end">
