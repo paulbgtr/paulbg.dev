@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Talente",
     description:
-      "Landing page for a hair‑salon booking app, designed to explain the product fast and convert visits into bookings.",
+      "Website redesign for a beauty salon focused on clarity, trust, and easier booking decisions.",
     href: "https://talente.ee",
     image: {
       src: "/talente.png",
@@ -28,6 +28,8 @@ const projects = [
     tags: ["Design System", "Web"],
     role: "Design + Frontend",
     year: "2025",
+    outcome:
+      "Redesigned and launched a clean salon website with a clearer path to booking from key pages.",
     aspect: "aspect-[16/10]",
     gradient:
       "bg-[linear-gradient(120deg,hsl(var(--muted))_0%,hsl(var(--accent))_45%,hsl(var(--muted))_100%)]",
@@ -35,7 +37,7 @@ const projects = [
   {
     title: "TalTech Collectibles",
     description:
-      "Led a team delivering an NFC‑connected collectibles platform with a companion web app.",
+      "Team project combining NFC keychains with a companion web app.",
     href: "https://taltech-collectibles.vercel.app/",
     image: {
       src: "/taltech-collectibles.png",
@@ -44,6 +46,8 @@ const projects = [
     tags: ["Hardware", "Product"],
     role: "UX + Frontend + Product design lead",
     year: "2025",
+    outcome:
+      "Led the team to ship a working end-to-end prototype connecting physical NFC interaction to web.",
     aspect: "aspect-[16/10]",
     gradient:
       "bg-[radial-gradient(circle_at_top,hsl(var(--accent))_0%,hsl(var(--muted))_55%,hsl(var(--background))_100%)]",
@@ -51,7 +55,7 @@ const projects = [
   {
     title: "Nebriq",
     description:
-      "Minimal, AI‑assisted writing workspace built to keep focus high and friction low.",
+      "AI-assisted writing SaaS built and launched as a complete product.",
     href: "https://nebriq.com",
     image: {
       src: "/nebriq.png",
@@ -60,6 +64,8 @@ const projects = [
     tags: ["Product", "Web", "AI"],
     role: "Product Design, Development, AI Integration",
     year: "2024",
+    outcome:
+      "Shipped from idea to production, validated with real usage, and closed after product learnings.",
     aspect: "aspect-[21/9]",
     gradient:
       "bg-[linear-gradient(135deg,hsl(var(--background))_0%,hsl(var(--accent))_45%,hsl(var(--muted))_100%)]",
@@ -114,12 +120,15 @@ export const SelectedWork = () => {
               </div>
             </CardHeader>
             <CardContent className="pt-0">
-              <div>
+              <div className="grid gap-2">
                 <div className="flex items-center gap-3">
                   <span>Role: {project.role}</span>
                   <span>•</span>
                   <span>{project.year}</span>
                 </div>
+                <p className="text-sm text-muted-foreground">
+                  Outcome: {project.outcome}
+                </p>
               </div>
             </CardContent>
             <CardFooter>
