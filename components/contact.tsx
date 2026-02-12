@@ -45,7 +45,7 @@ export const Contact = () => {
               <Link href="mailto:pavel@paulbg.dev">Email me</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <Link href="https://cal.eu/pbgtr">Schedule</Link>
+              <Link href="https://cal.eu/pbgtr">Schedule call</Link>
             </Button>
           </div>
         </div>
@@ -57,7 +57,7 @@ export const Contact = () => {
             </Link>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link href="https://pbgtr.bsky.social/" aria-label="X">
+            <Link href="https://pbgtr.bsky.social/" aria-label="Bluesky">
               Bluesky
             </Link>
           </Button>
