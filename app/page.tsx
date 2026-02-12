@@ -21,13 +21,13 @@ export default function Page() {
 
         <Separator />
 
-        <About />
+        <SelectedWork />
 
         <Services />
 
         <Process />
 
-        <SelectedWork />
+        <About />
 
         <Separator />
 
