@@ -18,7 +18,8 @@ export const About = () => {
         <div className="grid gap-2">
           <h2 className="text-3xl font-semibold md:text-4xl">About</h2>
           <p className="max-w-2xl text-muted-foreground">
-            Calm, structured work that stays understandable as products grow.
+            Web development with product thinking: UX-first, clean design, and
+            steady execution.
           </p>
         </div>
         <Badge variant="secondary" className="w-fit">
@@ -32,11 +33,11 @@ export const About = () => {
               Focus
             </div>
             <p className="text-lg font-semibold">
-              Structure, usability, and maintainability come first.
+              UX and interface clarity come first.
             </p>
             <p className="text-sm text-muted-foreground">
-              I build things that are easy to understand, easy to use, and easy
-              to evolve.
+              Most of my work is early product development and redesign work
+              where direction must be clear and usable fast.
             </p>
           </div>
         </Card>
@@ -46,10 +47,11 @@ export const About = () => {
               Intent
             </div>
             <p className="text-lg font-semibold">
-              I don’t chase trends for the sake of trends.
+              I build with product context, not just components.
             </p>
             <p className="text-sm text-muted-foreground">
-              I care about clarity, intent, and long-term usefulness.
+              I focus on user flow, edge cases, and maintainable frontend
+              foundations teams can keep building on.
             </p>
           </div>
         </Card>
