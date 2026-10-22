@@ -1,41 +1,40 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+import { site } from "./content";
+
+const mono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-poppins",
+  variable: "--font-jetbrains-mono",
 });
+
+const title = "Pavel B. | Electronics & Embedded";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://paulbg.dev"),
   title: {
-    default: "Pavel B. | Web Developer",
+    default: title,
     template: "%s | Pavel B.",
   },
-  description:
-    "I design and build web products that are calm, clear, and easy to maintain. Thoughtful structure, sharp UX, steady delivery.",
-  applicationName: "Pavel B. Portfolio",
+  description: site.description,
   authors: [{ name: "Pavel B." }],
   creator: "Pavel B.",
-  publisher: "Pavel B.",
-  category: "Portfolio",
   keywords: [
-    "Web developer",
-    "Frontend",
-    "UI design",
-    "Product design",
-    "Landing pages",
+    "Electronics design",
+    "Embedded systems",
+    "Firmware",
+    "PCB design",
+    "Hardware",
     "Tallinn",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Pavel B. | Web Developer",
-    description:
-      "I design and build web products that are calm, clear, and easy to maintain. Thoughtful structure, sharp UX, steady delivery.",
+    title,
+    description: site.description,
     url: "/",
     siteName: "Pavel B.",
     type: "website",
@@ -43,9 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Pavel B. | Web Developer",
-    description:
-      "I design and build web products that are calm, clear, and easy to maintain. Thoughtful structure, sharp UX, steady delivery.",
+    title,
+    description: site.description,
   },
 };
 
@@ -55,8 +53,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+    <html lang="en" className={mono.variable}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
